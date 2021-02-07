@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "salonBook"
+    }
+  },
+  "defaultProject": "salonBook",
+  "cli": {
+    "analytics": false
+  }
 }
