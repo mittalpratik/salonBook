@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SalonDataService } from 'src/app/services/salon-data.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  menuOptions : any;
+
+  constructor(private salonService : SalonDataService) { }
 
   ngOnInit(): void {
+    this.menuOptions = this.salonService.getMenuList();
   }
+
+  selectService(i: number, j : number): void {
+    this.salonService.sendServiceDetails(i,j)
+}
 
 }

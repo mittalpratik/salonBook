@@ -1,1 +1,16 @@
-<p>home-page works!</p>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+        <div *ngFor="let menu of menuOptions; let i=index">
+            {{menu.mainMenu}}
+            --------
+            <div *ngFor="let submenu of menu.childMenu; let j=index" (click)="selectService(i,j)">
+                {{submenu}}
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-display>
+
+        </app-display>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
