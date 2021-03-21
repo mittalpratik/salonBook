@@ -1,0 +1,18 @@
+<div *ngIf="serviceToDisplay">
+    <div>
+        Name : {{serviceToDisplay.name}}
+    </div>
+
+    <div>
+        Cost : {{serviceToDisplay.cost}}
+    </div>
+    
+    <div>
+        Description : {{serviceToDisplay.desc}}
+    </div>
+</div>
+
+<div *ngIf="!serviceToDisplay">
+    Please select a service to book
+</div>
+
